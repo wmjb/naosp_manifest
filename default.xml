@@ -35,9 +35,7 @@
   <project path="art" name="platform/art" groups="pdk" />
   <project path="bionic" name="platform/bionic" groups="pdk" />
   <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" groups="pdk-cw-fs" />
-  <!--
   <project path="bootable/recovery" name="platform/bootable/recovery" groups="pdk" />
-  -->
   <project path="cts" name="platform/cts" groups="cts,pdk-cw-fs" />
   <project path="dalvik" name="platform/dalvik" groups="pdk-cw-fs" />
   <project path="developers/build" name="platform/developers/build" />
@@ -52,8 +50,9 @@
   <project path="device/asus/fugu" name="device/asus/fugu" groups="device,fugu" />
   <project path="device/asus/fugu-kernel" name="device/asus/fugu-kernel" groups="device,fugu" clone-depth="1" />
   <project path="device/asus/grouper" name="device/asus/grouper" groups="device,grouper" />
-  <project path="device/asus/tilapia" name="device/asus/tilapia" groups="device,grouper" />
   -->
+  <project path="device/asus/tilapia" name="device/asus/tilapia" groups="device,grouper" />
+
   <project path="device/common" name="device/common" groups="pdk-cw-fs" />
   <project path="device/generic/arm64" name="device/generic/arm64" groups="pdk" />
   <project path="device/generic/armv7-a-neon" name="device/generic/armv7-a-neon" groups="pdk" />
@@ -540,14 +539,8 @@
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
   <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" />
 
-  <!-- Sony Xperia S / Nozomi  -->
-  <project path="device/sony/dash" name="device_sony_dash" remote="mickybart" />
-  <project path="device/sony/nozomi" name="device_sony_nozomi" remote="millosr" />
-  <project path="device/sony/thermanager" name="device_sony_thermanager" remote="mickybart" revision="master" />
-  <project path="kernel/msm" name="kernel_sony_msm8x60" remote="mickybart" revision="android-msm-sony-fuji-3.4-nAOSP-5.1" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" groups="pdk,linux,arm" remote="aosp" revision="refs/tags/android-4.4.4_r2.0.1" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" groups="pdk,linux,arm" remote="aosp" revision="refs/tags/android-4.4.4_r2.0.1" />
-  <project path="vendor/sony/nozomi" name="vendor_sony_nozomi" remote="mickybart" />
+  <!-- Asus Nexus 7 / Grouper - Tilapia  -->
+  <project path="device/asus/grouper" name="device_asus_grouper" remote="millosr" />
 
   <!-- from CyanogenMod -->
   <project path="external/android-visualizer" name="android_external_android-visualizer" remote="cm" />
@@ -564,14 +557,7 @@
   <project path="packages/apps/InCallUI" name="android_packages_apps_InCallUI" remote="mickybart" />
   <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="millosr" />
 
-  <!-- 3rd -->
-  <project path="bootable/recovery" name="android_bootable_recovery" remote="millosr" />
-  <project path="external/koush/Superuser" name="android_external_koush_Superuser" remote="mickybart" />
-  <project path="external/koush/Widgets" name="android_external_koush_Widgets" remote="mickybart" />
-  <project path="packages/apps/FMRadio" name="android_packages_apps_FMRadio" remote="mickybart" revision="refs/heads/nozomi" />
-  <project path="packages/apps/ViPER4AndroidFX" name="viper4android_fx" remote="v4a" />
-  <project path="packages/apps/WakeUp" name="android_packages_apps_WakeUp" remote="millosr" revision="refs/heads/master" />
-
   <!-- ipromeh - prebuilt webview -->
   <project path="frameworks/webview" name="android_frameworks_webview" groups="pdk-cw-fs" remote="ipromeh" />
 </manifest>
+

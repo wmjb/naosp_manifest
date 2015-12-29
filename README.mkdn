@@ -1,23 +1,33 @@
-nAOSP 5.1 for Sony Xperia S
+nAOSP 5.1 for Asus Nexus 7 2012 - Grouper, Tilapia
 
-near AOSP ROM 5.1
+AOSP + Layers + <other sistem ui changes>
 
-Forked from mickybart nAOSP repository:
+Forked from mickybart nAOSP repository (originally for Sony Xperia S):
 
-    https://github.com/mickybart/android_manifest
+https://github.com/mickybart/android_manifest
 
-The purpose of this ROM is to provide support for Xperia S.
 
-Build process :
+Download sources :
 
-    repo init -u https://github.com/millosr/naosp_manifest -b nAOSP-5.1
+    repo init -u https://github.com/millosr/naosp_manifest -b nAOSP-5.1-grouper
     repo sync
-    cd device/sony/nozomi/patch
+
+Download vendor binaries:
+
+grouper: https://developers.google.com/android/nexus/drivers#grouperlmy47v
+tilapia: https://developers.google.com/android/nexus/drivers#tilapialmy47v
+
+Unpack vendor binaries in root of your naosp directory (http://source.android.com/source/running.html#obtaining-proprietary-binaries)
+
+Patch sources and build
+
+    cd device/asus/grouper/patch
     ./aosp-patch-apply.sh <path to the source code>
     cd -
     source build/envsetup.sh
-    lunch aosp_nozomi-userdebug
-    make otapackage
+    lunch
+    <choose grouper or tilapia>
+    make otapackage -j4    (-j<number of threads>)
 
 Update a previous build (resync) :
 
