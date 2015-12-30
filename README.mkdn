@@ -1,6 +1,6 @@
 nAOSP 5.1 for Asus Nexus 7 2012 - Grouper, Tilapia
 
-AOSP + Layers + <other sistem ui changes>
+AOSP + Layers + other sistem ui changes
 
 Forked from mickybart nAOSP repository (originally for Sony Xperia S):
 
@@ -15,6 +15,7 @@ Download sources :
 Download vendor binaries:
 
 grouper: https://developers.google.com/android/nexus/drivers#grouperlmy47v
+
 tilapia: https://developers.google.com/android/nexus/drivers#tilapialmy47v
 
 Unpack vendor binaries in root of your naosp directory (http://source.android.com/source/running.html#obtaining-proprietary-binaries)
@@ -34,4 +35,3 @@ Update a previous build (resync) :
     ./aosp-patch-unapply.sh <path to the source code>
     repo sync
     ./aosp-patch-apply.sh <path to the source code>   (eventually merge manually in case of conflict)
-
