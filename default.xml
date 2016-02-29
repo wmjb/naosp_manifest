@@ -8,6 +8,10 @@
            fetch="https://github.com/mickybart"
            revision="refs/heads/nAOSP-6.0" />
 
+  <remote  name="millosr"
+           fetch="https://github.com/millosr"
+           revision="refs/heads/aosp-6.0"/>
+
   <remote  name="cm" 
            fetch="https://github.com/CyanogenMod"
            revision="refs/heads/cm-13.0" />
@@ -20,15 +24,13 @@
            remote="aosp"
            sync-j="4" />
 
-  <!-- 
   <project path="build" name="platform/build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  -->
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
   <project path="art" name="platform/art" groups="pdk" />
   <!-- <project path="bionic" name="platform/bionic" groups="pdk" /> -->
-  <!-- <project path="bootable/recovery" name="platform/bootable/recovery" groups="pdk" /> -->
+  <project path="bootable/recovery" name="platform/bootable/recovery" groups="pdk" />
   <project path="cts" name="platform/cts" groups="cts,pdk-cw-fs,pdk-fs" />
   <project path="dalvik" name="platform/dalvik" groups="pdk-cw-fs,pdk-fs" />
   <project path="developers/build" name="platform/developers/build" />
@@ -182,7 +184,7 @@
   <project path="external/libmpeg2" name="platform/external/libmpeg2" groups="pdk" />
   <project path="external/libmtp" name="platform/external/libmtp" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/libnfc-nci" name="platform/external/libnfc-nci" groups="pdk" />
-  <!-- <project path="external/libnfc-nxp" name="platform/external/libnfc-nxp" groups="pdk" /> -->
+  <project path="external/libnfc-nxp" name="platform/external/libnfc-nxp" groups="pdk" />
   <project path="external/libnl" name="platform/external/libnl" groups="pdk" />
   <project path="external/libogg" name="platform/external/libogg" groups="pdk" />
   <project path="external/libopus" name="platform/external/libopus" groups="pdk" />
@@ -208,7 +210,7 @@
   <project path="external/lldb" name="platform/external/lldb" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/llvm" name="platform/external/llvm" groups="pdk" />
   <project path="external/ltrace" name="platform/external/ltrace" groups="pdk-cw-fs,pdk-fs" />
-  <!-- <project path="external/lz4" name="platform/external/lz4" groups="pdk-cw-fs,pdk-fs" /> -->
+  <project path="external/lz4" name="platform/external/lz4" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/lzma" name="platform/external/lzma" groups="pdk" />
   <project path="external/marisa-trie" name="platform/external/marisa-trie" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/markdown" name="platform/external/markdown" groups="pdk-cw-fs,pdk-fs" />
@@ -251,7 +253,7 @@
   <project path="external/safe-iop" name="platform/external/safe-iop" groups="pdk" />
   <project path="external/scrypt" name="platform/external/scrypt" groups="pdk" />
   <project path="external/selinux" name="platform/external/selinux" groups="pdk" />
-  <!-- <project path="external/sepolicy" name="platform/external/sepolicy" groups="pdk" /> -->
+  <project path="external/sepolicy" name="platform/external/sepolicy" groups="pdk" />
   <project path="external/sfntly" name="platform/external/sfntly" groups="pdk,qcom_msm8x26" />
   <project path="external/skia" name="platform/external/skia" groups="pdk,qcom_msm8x26" />
   <project path="external/slf4j" name="platform/external/slf4j" groups="pdk-fs" />
@@ -296,7 +298,7 @@
   <project path="frameworks/minikin" name="platform/frameworks/minikin" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/ml" name="platform/frameworks/ml" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/multidex" name="platform/frameworks/multidex" groups="pdk-cw-fs,pdk-fs" />
-  <!-- <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" /> -->
+  <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" />
   <project path="frameworks/opt/bitmap" name="platform/frameworks/opt/bitmap" groups="pdk-fs" />
   <project path="frameworks/opt/bluetooth" name="platform/frameworks/opt/bluetooth" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" groups="pdk-cw-fs,pdk-fs" />
@@ -313,7 +315,7 @@
   <project path="frameworks/opt/net/wifi" name="platform/frameworks/opt/net/wifi" groups="pdk" />
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/setupwizard" name="platform/frameworks/opt/setupwizard" groups="pdk-cw-fs,pdk-fs" />
-  <!-- <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" /> -->
+  <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" />
   <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/widget" name="platform/frameworks/opt/widget" groups="pdk-cw-fs,pdk-fs" />
@@ -324,7 +326,7 @@
   <project path="frameworks/webview" name="platform/frameworks/webview" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/wilhelm" name="platform/frameworks/wilhelm" groups="pdk-cw-fs,pdk-fs" />
   <project path="hardware/akm" name="platform/hardware/akm" />
-  <!-- <project path="hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt" groups="pdk" /> -->
+  <project path="hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt" groups="pdk" />
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="pdk,broadcom_wlan" />
   <project path="hardware/intel/audio_media" name="platform/hardware/intel/audio_media" groups="intel" />
   <project path="hardware/intel/bootstub" name="platform/hardware/intel/bootstub" groups="intel" />
@@ -341,7 +343,7 @@
   <project path="hardware/intel/img/psb_video" name="platform/hardware/intel/img/psb_video" groups="intel" />
   <project path="hardware/intel/sensors" name="platform/hardware/intel/sensors" groups="intel_sensors" />
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
-  <!-- <project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" /> -->
+  <project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" />
   <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" />
   <project path="hardware/marvell/bt" name="platform/hardware/marvell/bt" groups="marvell_bt" />
   <project path="hardware/mediatek" name="platform/hardware/mediatek" groups="mediatek,mediatek_wear" />
@@ -370,7 +372,7 @@
   <project path="libnativehelper" name="platform/libnativehelper" groups="pdk" />
   <project path="ndk" name="platform/ndk" groups="generic_fs" />
   <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" groups="pdk-cw-fs,pdk-fs" />
-  <!-- <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" groups="pdk-cw-fs,pdk-fs" /> -->
+  <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" groups="pdk-cw-fs,pdk-fs" />
   <!-- <project path="packages/apps/Browser" name="platform/packages/apps/Browser" groups="pdk-fs"/> -->
   <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" groups="pdk-fs" />
   <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" groups="pdk-fs" />
@@ -399,7 +401,7 @@
   <project path="packages/apps/Messaging" name="platform/packages/apps/Messaging" groups="pdk-fs" />
   <!-- <project path="packages/apps/Music" name="platform/packages/apps/Music" groups="pdk-fs" /> -->
   <!-- <project path="packages/apps/MusicFX" name="platform/packages/apps/MusicFX" groups="pdk-fs" /> -->
-  <!-- <project path="packages/apps/Nfc" name="platform/packages/apps/Nfc" groups="apps_nfc,pdk-fs" /> -->
+  <project path="packages/apps/Nfc" name="platform/packages/apps/Nfc" groups="apps_nfc,pdk-fs" />
   <project path="packages/apps/OneTimeInitializer" name="platform/packages/apps/OneTimeInitializer" groups="pdk-fs" />
   <project path="packages/apps/PackageInstaller" name="platform/packages/apps/PackageInstaller" groups="pdk-fs" />
   <project path="packages/apps/Phone" name="platform/packages/apps/Phone" groups="pdk-fs" />
@@ -481,7 +483,7 @@
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="platform/sdk" groups="pdk-cw-fs,pdk-fs" />
-  <!-- <project path="system/bt" name="platform/system/bt" groups="pdk" /> -->
+  <project path="system/bt" name="platform/system/bt" groups="pdk" />
   <!-- <project path="system/core" name="platform/system/core" groups="pdk" /> -->
   <!-- <project path="system/extras" name="platform/system/extras" groups="pdk" /> -->
   <project path="system/gatekeeper" name="platform/system/gatekeeper" groups="pdk" />
@@ -504,44 +506,26 @@
   <project path="tools/studio/translation" name="platform/tools/studio/translation" groups="notdefault,tools" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
   <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" />
-  
-  <!-- Sony Xperia S / Nozomi  -->
-  
-  <project path="device/sony/dash" name="device_sony_dash" remote="mickybart" />
-  <project path="device/sony/nozomi" name="device_sony_nozomi" remote="mickybart" />
-  <project path="device/sony/thermanager" name="device_sony_thermanager" remote="mickybart" revision="master" />
-  <project path="external/openssl_legacy" name="android_external_openssl" groups="pdk" remote="mickybart" />
-  <project path="external/stlport" name="platform/external/stlport" groups="pdk" revision="lollipop-mr1-release" /> 
-  <project path="kernel/msm" name="kernel_sony_msm8x60" remote="mickybart" revision="android-msm-sony-fuji-3.4-nAOSP-6.0" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" groups="pdk,linux,arm" remote="aosp" revision="refs/tags/android-4.4.4_r2.0.1" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" groups="pdk,linux,arm" remote="aosp" revision="refs/tags/android-4.4.4_r2.0.1" />
-  <project path="vendor/sony/nozomi" name="vendor_sony_nozomi" remote="mickybart" />
-  
-  <!-- nAOSP/Nozomi Hardware -->
 
-  <project path="build" name="android_build" groups="pdk" remote="mickybart" >
-    <copyfile src="core/root.mk" dest="Makefile" />
-  </project>
+  <!-- Asus Nexus 7 / Grouper - Tilapia  -->
+  <project path="device/asus/grouper" name="device_asus_grouper" remote="millosr" revision="refs/heads/nAOSP-6.0"/>
+  <project path="device/asus/tilapia" name="device_asus_tilapia" remote="millosr"/>
+  <project path="vendor" name="vendor_asus_grouper_tilapia" remote="millosr"/>
+
+  <!-- stl port -->
+  <project path="external/stlport" name="platform/external/stlport" groups="pdk" revision="lollipop-mr1-release" />
+  
+  <!-- nAOSP Hardware -->
   <project path="bionic" name="android_bionic" groups="pdk" remote="mickybart" />
   <project path="external/f2fs-tools" name="android_external_f2fs-tools" groups="pdk" remote="mickybart" />
-  <project path="external/libnfc-nxp" name="android_external_libnfc-nxp" groups="pdk" remote="mickybart" />
-  <project path="external/lz4" name="android_external_lz4" groups="pdk-cw-fs,pdk-fs" remote="mickybart" />
-  <project path="external/sepolicy" name="android_external_sepolicy" groups="pdk" remote="mickybart" />
   <project path="frameworks/base" name="android_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="mickybart" />
-  <project path="frameworks/native" name="android_frameworks_native" groups="pdk" remote="mickybart" />
-  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" groups="pdk" remote="mickybart" />
-  <project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" groups="pdk" remote="mickybart" />
-  <project path="hardware/libhardware" name="android_hardware_libhardware" groups="pdk" remote="mickybart" />
-  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="mickybart" />
   <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" groups="pdk-fs" remote="mickybart" />
   <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" groups="pdk-fs" remote="mickybart" />
   <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" groups="pdk-fs" remote="mickybart" />
   <project path="packages/apps/Email" name="android_packages_apps_Email" groups="pdk-fs" remote="mickybart" />
   <project path="packages/apps/FMRadio" name="android_packages_apps_FMRadio" groups="pdk-fs" remote="mickybart" />
-  <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" groups="apps_nfc,pdk-fs" remote="mickybart" />
   <project path="packages/apps/ROMUpdater" name="android_packages_apps_ROMUpdater" remote="mickybart" />
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" groups="pdk-fs" remote="mickybart" />
-  <project path="system/bt" name="android_system_bt" groups="pdk" remote="mickybart" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" groups="pdk-fs" remote="millosr" revision="refs/heads/nAOSP-6.0-grouper"/>
   <project path="system/core" name="android_system_core" groups="pdk" remote="mickybart" />
   <project path="system/extras" name="android_system_extras" groups="pdk" remote="mickybart" />
   
@@ -553,10 +537,7 @@
   <project path="packages/apps/Eleven" name="android_packages_apps_Eleven" remote="cm" />
 
   <!-- 3rd -->
-  <project path="bootable/recovery" name="android_bootable_recovery" remote="mickybart" />
   <project path="external/koush/Superuser" name="android_external_koush_Superuser" remote="mickybart" />
   <project path="external/koush/Widgets" name="android_external_koush_Widgets" remote="mickybart" />
-  <project path="packages/apps/ViPER4AndroidFX" name="viper4android_fx" remote="v4a" />
-  <project path="packages/apps/WakeUp" name="android_packages_apps_WakeUp" remote="mickybart" revision="refs/heads/master" />
 
 </manifest>
