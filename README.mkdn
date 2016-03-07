@@ -1,19 +1,17 @@
-nAOSP 6.0 for Sony Xperia S
-====================
+nAOSP 6.0 for Asus Nexus 7 2012 - Grouper, Tilapia
+==================================================
+
 near AOSP ROM 6.0
 
-The purpose of this ROM is to provide support for Xperia S based on AOSP code.<br>
-Some improvements and specific features are included
+Forked from mickybart nAOSP repository (originally for Sony Xperia S):
 
-[XDA Thread](http://forum.xda-developers.com/xperia-s/s-development/rom-naosprom-xperia-s-t2958516) <br>
-Author:
-[mickybart](http://forum.xda-developers.com/member.php?u=6043081)
+https://github.com/mickybart/android_manifest
 
 Build process :
 
-    repo init -u https://github.com/mickybart/android_manifest -b nAOSP-6.0
+    repo init -u https://github.com/millosr/naosp_manifest -b nAOSP-6.0-grouper
     repo sync
     source build/envsetup.sh
-    lunch aosp_nozomi-userdebug
-    make otapackage
-
+    lunch
+    <choose grouper or tilapia>
+    make otapackage -j4    (-j<number of threads>)
