@@ -546,5 +546,7 @@
   <!-- 3rd -->
   <project path="external/koush/Superuser" name="android_external_koush_Superuser" remote="mickybart" />
   <project path="external/koush/Widgets" name="android_external_koush_Widgets" remote="mickybart" />
+  <project path="packages/apps/ViPER4AndroidFX" name="viper4android_fx" remote="v4a" />
 
 </manifest>
+
