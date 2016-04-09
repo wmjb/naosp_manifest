@@ -20,7 +20,11 @@
            fetch="https://github.com/vipersaudio"
            revision="refs/heads/master" />
 
-  <default revision="refs/tags/android-6.0.1_r22"
+  <remote  name="danielhk"
+           fetch="https://github.com/danielhk"
+           revision="refs/heads/cm-13.0" />
+
+  <default revision="refs/tags/android-6.0.1_r24"
            remote="aosp"
            sync-j="4" />
 
@@ -547,6 +551,7 @@
   <project path="external/koush/Superuser" name="android_external_koush_Superuser" remote="mickybart" />
   <project path="external/koush/Widgets" name="android_external_koush_Widgets" remote="mickybart" />
   <project path="packages/apps/ViPER4AndroidFX" name="viper4android_fx" remote="v4a" />
+  <project path="packages/apps/PerformanceControl" name="android_packages_apps_PerformanceControl" remote="danielhk"/>
 
 </manifest>
 
