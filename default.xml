@@ -24,7 +24,7 @@
            fetch="https://github.com/danielhk"
            revision="refs/heads/cm-13.0" />
 
-  <default revision="refs/tags/android-6.0.1_r24"
+  <default revision="refs/tags/android-6.0.1_r43"
            remote="aosp"
            sync-j="4" />
 
@@ -393,6 +393,7 @@
   <!-- <project path="packages/apps/Dialer" name="platform/packages/apps/Dialer" groups="pdk-fs" /> -->
   <!-- <project path="packages/apps/Email" name="platform/packages/apps/Email" groups="pdk-fs" /> -->
   <project path="packages/apps/ExactCalculator" name="platform/packages/apps/ExactCalculator" groups="pdk-fs" />
+  <project path="packages/apps/Exchange" name="platform/packages/apps/Exchange" groups="pdk-fs" />
   <!-- <project path="packages/apps/FMRadio" name="platform/packages/apps/FMRadio" groups="pdk-fs" /> -->
   <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" groups="pdk-fs" />
   <!-- <project path="packages/apps/Gallery2" name="platform/packages/apps/Gallery2" groups="pdk-fs" /> -->
