@@ -20,6 +20,9 @@
            fetch="https://github.com/danielhk"
            revision="refs/heads/cm-13.0" />
 
+  <remote  name="ads"
+           fetch="https://github.com/AndDiSa/" />
+
   <!-- remove upstream projects modified for nAOSProm -->
   <remove-project name="platform/build" />
   <remove-project name="platform/external/f2fs-tools" />
@@ -72,6 +75,7 @@
   <project path="device/asus/grouper" name="device_asus_grouper" remote="millosr"/>
   <project path="device/asus/tilapia" name="device_asus_tilapia" remote="millosr"/>
   <project path="vendor" name="vendor_asus_grouper_tilapia" remote="millosr" revision="refs/heads/aosp-7.0"/>
+  <project path="kernel/asus/grouper" name="android_kernel_asus_grouper" remote="ads" revision="ads-7.0.1" />
 
   <!-- remove features -->
   <remove-project name="platform/packages/apps/Music" />
