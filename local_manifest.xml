@@ -6,7 +6,7 @@
 
   <remote  name="millosr"
            fetch="https://github.com/millosr"
-           revision="refs/heads/nAOSP-7.1" />
+           revision="refs/heads/nAOSP-7.1-grouper" />
 
   <remote  name="v4a"
            fetch="https://github.com/vipersaudio"
@@ -26,6 +26,7 @@
   <!-- remove upstream projects modified for nAOSProm -->
   <remove-project name="platform/build" />
   <remove-project name="platform/external/f2fs-tools" />
+  <remove-project name="platform/frameworks/av" />
   <remove-project name="platform/frameworks/base" />
   <remove-project name="platform/frameworks/native" />
   <remove-project name="platform/frameworks/volley" />
@@ -41,22 +42,23 @@
   <remove-project name="platform/system/sepolicy" />
 
   <!-- reintroduce modified projects with nAOSProm support -->
-  <project path="build" name="android_build" remote="millosr" revision="refs/heads/nAOSP-7.1-grouper">
+  <project path="build" name="android_build" remote="millosr">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="external/f2fs-tools" name="android_external_f2fs-tools" remote="mickybart" />
+  <project path="frameworks/av" name="android_frameworks_av" remote="millosr" />
   <project path="frameworks/base" name="android_frameworks_base" remote="mickybart" />
   <project path="frameworks/native" name="android_frameworks_native" remote="mickybart" />
   <project path="frameworks/volley" name="android-volley" remote="millosr" revision="refs/heads/nAOSP-7.0"/>
   <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="mickybart" />
   <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" remote="mickybart" />
   <project path="packages/apps/Email" name="android_packages_apps_Email" remote="mickybart" />
-  <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" remote="millosr" revision="refs/heads/nAOSP-7.0-grouper"/>
+  <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" remote="millosr"/>
   <project path="packages/apps/PackageInstaller" name="android_packages_apps_PackageInstaller" remote="mickybart" />
   <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="mickybart" />
-  <project path="system/core" name="android_system_core" remote="mickybart" />
+  <project path="system/core" name="android_system_core" remote="millosr" />
   <project path="system/extras" name="android_system_extras" remote="mickybart" />
-  <project path="system/sepolicy" name="android_system_sepolicy" remote="millosr" revision="refs/heads/nAOSP-7.1-grouper"/>
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="millosr"/>
 
   <!-- Extras/3rd -->
   <project path="external/android-visualizer" name="android_external_android-visualizer" remote="cm" />
@@ -72,8 +74,8 @@
   <project path="external/stlport" name="android_external_stlport" remote="mickybart" />
 
   <!-- Asus Nexus 7 / Grouper - Tilapia  -->
-  <project path="device/asus/grouper" name="device_asus_grouper" remote="millosr"/>
-  <project path="device/asus/tilapia" name="device_asus_tilapia" remote="millosr"/>
+  <project path="device/asus/grouper" name="device_asus_grouper" remote="millosr" revision="refs/heads/nAOSP-7.1"/>
+  <project path="device/asus/tilapia" name="device_asus_tilapia" remote="millosr" revision="refs/heads/nAOSP-7.1"/>
   <project path="vendor" name="vendor_asus_grouper_tilapia" remote="millosr" revision="refs/heads/aosp-7.0"/>
   <project path="kernel/asus/grouper" name="android_kernel_asus_grouper" remote="ads" revision="ads-7.0.1" />
 
