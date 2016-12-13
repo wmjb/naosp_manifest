@@ -2,26 +2,19 @@
 <manifest>
   <remote  name="mickybart"
            fetch="https://github.com/mickybart"
-           revision="refs/heads/nAOSP-7.1" />
+           revision="refs/heads/nAOSP-7.1.1" />
 
   <remote  name="millosr"
            fetch="https://github.com/millosr"
-           revision="refs/heads/nAOSP-7.1-grouper" />
-
-  <remote  name="v4a"
-           fetch="https://github.com/vipersaudio"
-           revision="refs/heads/master" />
+           revision="refs/heads/nAOSP-7.1.1-grouper" />
 
   <remote  name="cm"
            fetch="https://github.com/CyanogenMod"
 	       revision="refs/heads/cm-14.1" />
 
-  <remote  name="danielhk"
-           fetch="https://github.com/danielhk"
-           revision="refs/heads/cm-13.0" />
-
-  <remote  name="ads"
-           fetch="https://github.com/AndDiSa/" />
+  <remote  name="oms"
+           fetch="https://github.com/TeamSubstratum"
+           revision="refs/heads/n" />
 
   <!-- remove upstream projects modified for nAOSProm -->
   <remove-project name="platform/build" />
@@ -65,7 +58,7 @@
   <project path="external/busybox" name="android_external_busybox" remote="mickybart" />
   <project path="packages/apps/Eleven" name="android_packages_apps_Eleven" remote="cm" />
   <project path="packages/apps/Gallery2" name="android_packages_apps_Gallery2" remote="cm" />
-  <project path="packages/apps/PerformanceControl" name="android_packages_apps_PerformanceControl" remote="danielhk"/>
+  <project path="packages/apps/masquerade" name="masquerade" remote="oms" />
   <project path="packages/apps/ROMUpdater" name="android_packages_apps_ROMUpdater" remote="mickybart" />
   <project path="packages/apps/ViPER4AndroidFX" name="android_packages_apps_ViPER4AndroidFX" remote="mickybart" revision="refs/heads/master" />
   <project path="system/extras/su" name="android_system_extras_su" remote="mickybart" />
@@ -74,10 +67,10 @@
   <project path="external/stlport" name="android_external_stlport" remote="mickybart" />
 
   <!-- Asus Nexus 7 / Grouper - Tilapia  -->
-  <project path="device/asus/grouper" name="device_asus_grouper" remote="millosr" revision="refs/heads/nAOSP-7.1"/>
-  <project path="device/asus/tilapia" name="device_asus_tilapia" remote="millosr" revision="refs/heads/nAOSP-7.1"/>
+  <project path="device/asus/grouper" name="device_asus_grouper" remote="millosr"/>
+  <project path="device/asus/tilapia" name="device_asus_tilapia" remote="millosr"/>
   <project path="vendor" name="vendor_asus_grouper_tilapia" remote="millosr" revision="refs/heads/aosp-7.0"/>
-  <project path="kernel/asus/grouper" name="android_kernel_asus_grouper" remote="ads" revision="ads-7.0.1" />
+  <project path="kernel/asus/grouper" name="android_kernel_asus_grouper" remote="millosr" revision="refs/heads/ads-7.0.1" />
 
   <!-- remove features -->
   <remove-project name="platform/packages/apps/Music" />
