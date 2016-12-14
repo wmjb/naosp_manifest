@@ -1,5 +1,5 @@
 
-#nAOSP 7.0 for Asus Nexus 7 2012 - Grouper, Tilapia
+#nAOSP 7.1 for Asus Nexus 7 2012 - Grouper, Tilapia
 
 near AOSP ROM 7.1
 
