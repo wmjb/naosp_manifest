@@ -16,6 +16,12 @@
            fetch="https://github.com/TeamSubstratum"
            revision="refs/heads/n" />
 
+  <remote  name="ads"
+           fetch="https://github.com/AndDiSa/" />
+
+  <remote  name="unlegacy"
+           fetch="https://github.com/Unlegacy-Android/" />
+
   <!-- remove upstream projects modified for nAOSProm -->
   <remove-project name="platform/build" />
   <remove-project name="platform/external/f2fs-tools" />
@@ -27,7 +33,6 @@
   <remove-project name="platform/packages/apps/DeskClock" />
   <remove-project name="platform/packages/apps/Email" />
   <remove-project name="platform/packages/apps/Gallery2" />
-  <remove-project name="platform/packages/apps/Nfc" />
   <remove-project name="platform/packages/apps/PackageInstaller" />
   <remove-project name="platform/packages/apps/Settings" />
   <remove-project name="platform/system/core" />
@@ -46,7 +51,6 @@
   <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="mickybart" />
   <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" remote="mickybart" />
   <project path="packages/apps/Email" name="android_packages_apps_Email" remote="mickybart" />
-  <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" remote="millosr"/>
   <project path="packages/apps/PackageInstaller" name="android_packages_apps_PackageInstaller" remote="mickybart" />
   <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="mickybart" />
   <project path="system/core" name="android_system_core" remote="millosr" />
@@ -63,14 +67,16 @@
   <project path="packages/apps/ViPER4AndroidFX" name="android_packages_apps_ViPER4AndroidFX" remote="mickybart" revision="refs/heads/master" />
   <project path="system/extras/su" name="android_system_extras_su" remote="mickybart" />
 
-  <!-- stl port -->
-  <project path="external/stlport" name="android_external_stlport" remote="mickybart" />
-
   <!-- Asus Nexus 7 / Grouper - Tilapia  -->
-  <project path="device/asus/grouper" name="device_asus_grouper" remote="millosr"/>
-  <project path="device/asus/tilapia" name="device_asus_tilapia" remote="millosr"/>
-  <project path="vendor" name="vendor_asus_grouper_tilapia" remote="millosr" revision="refs/heads/aosp-7.0"/>
+  <project path="device/asus/grouper" name="android_device_asus_grouper" remote="millosr" revision="refs/heads/nAOSP-7.1.1"/>
+  <project path="device/asus/tilapia" name="device_asus_tilapia" remote="millosr" revision="refs/heads/nAOSP-7.1.1"/>
   <project path="kernel/asus/grouper" name="android_kernel_asus_grouper" remote="millosr" revision="refs/heads/ads-7.0.1" />
+  <project path="vendor/asus" name="proprietary_vendor_asus" remote="ads" revision="ads-7.0.1" />
+  <project path="vendor/broadcom" name="proprietary_vendor_broadcom" remote="ads" revision="ads-7.0.1" />
+  <project path="vendor/elan" name="proprietary_vendor_elan" remote="ads" revision="oct-mm" />
+  <project path="vendor/invensense" name="proprietary_vendor_invensense" remote="ads" revision="ads-7.0.1" />
+  <project path="vendor/nvidia" name="proprietary_vendor_nvidia" remote="ads" revision="ads-7.0.1" />
+  <project path="vendor/widevine" name="proprietary_vendor_widevine" remote="unlegacy" revision="aosp-7.1" />
 
   <!-- remove features -->
   <remove-project name="platform/packages/apps/Music" />
