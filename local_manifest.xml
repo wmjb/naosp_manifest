@@ -9,7 +9,7 @@
            revision="refs/heads/nAOSP-7.1.1-grouper" />
 
   <remote  name="cm"
-           fetch="https://github.com/CyanogenMod"
+           fetch="https://github.com/LineageOS"
 	       revision="refs/heads/cm-14.1" />
 
   <remote  name="oms"
