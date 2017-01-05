@@ -22,6 +22,9 @@
   <remote  name="unlegacy"
            fetch="https://github.com/Unlegacy-Android/" />
 
+  <remote  name="fwhem"
+           fetch="https://github.com/noobbuilds/" />
+
   <!-- remove upstream projects modified for nAOSProm -->
   <remove-project name="platform/build" />
   <remove-project name="platform/external/f2fs-tools" />
@@ -38,6 +41,7 @@
   <remove-project name="platform/system/core" />
   <remove-project name="platform/system/extras" />
   <remove-project name="platform/system/sepolicy" />
+  <remove-project name="device/htc/flounder" />
 
   <!-- reintroduce modified projects with nAOSProm support -->
   <project path="build" name="android_build" remote="millosr">
@@ -78,6 +82,10 @@
   <project path="vendor/nvidia" name="proprietary_vendor_nvidia" remote="ads" revision="ads-7.0.1" />
   <project path="vendor/widevine" name="proprietary_vendor_widevine" remote="unlegacy" revision="aosp-7.1" />
 
+  <!-- HTC Nexus 9 / Flounder  -->
+  <project path="device/htc/flounder" name="device_htc_flounder" remote="millosr" revision="refs/heads/nAOSP-7.1.1"/>
+  <project path="vendor/htc" name="platform_vendor_htc" remote="fwhem" revision="711" />
+
   <!-- remove features -->
   <remove-project name="platform/packages/apps/Music" />
   <remove-project name="platform/packages/apps/MusicFX" />
@@ -94,8 +102,6 @@
   <remove-project name="device/google/dragon-kernel" />
   <remove-project name="device/google/marlin" />
   <remove-project name="device/google/marlin-kernel" />
-  <remove-project name="device/htc/flounder" />
-  <remove-project name="device/htc/flounder-kernel" />
   <remove-project name="device/huawei/angler" />
   <remove-project name="device/huawei/angler-kernel" />
   <remove-project name="device/intel/edison" />
