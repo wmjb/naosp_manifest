@@ -36,6 +36,7 @@
   <remove-project name="platform/packages/apps/DeskClock" />
   <remove-project name="platform/packages/apps/Email" />
   <remove-project name="platform/packages/apps/Gallery2" />
+  <remove-project name="platform/packages/apps/Launcher3" />
   <remove-project name="platform/packages/apps/PackageInstaller" />
   <remove-project name="platform/packages/apps/Settings" />
   <remove-project name="platform/system/core" />
@@ -55,6 +56,7 @@
   <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="mickybart" />
   <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" remote="mickybart" />
   <project path="packages/apps/Email" name="android_packages_apps_Email" remote="mickybart" />
+  <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="mickybart" />
   <project path="packages/apps/PackageInstaller" name="android_packages_apps_PackageInstaller" remote="mickybart" />
   <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="mickybart" />
   <project path="system/core" name="android_system_core" remote="millosr" />
