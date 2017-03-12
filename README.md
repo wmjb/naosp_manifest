@@ -1,12 +1,12 @@
 
-#nAOSP 7.0 for Asus Nexus 7 2012 - Grouper, Tilapia
+#nAOSP 7.1.1 for Asus Nexus 7 2012 - Grouper, Tilapia
 
-near AOSP ROM 7.1
+near AOSP ROM 7.1.1
 
 ##Build
 
 ```
-repo init -u https://github.com/millosr/naosp_manifest -b nAOSP-7.1-grouper
+repo init -u https://github.com/millosr/naosp_manifest -b nAOSP-7.1.1-grouper
 mkdir .repo/local_manifests/
 ln -s ../manifests/local_manifest.xml .repo/local_manifests/local_manifest.xml
 repo sync
