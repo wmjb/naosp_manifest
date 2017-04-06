@@ -2,11 +2,11 @@
 <manifest>
   <remote  name="mickybart"
            fetch="https://github.com/mickybart"
-           revision="refs/heads/nAOSP-nougat-mr1.3-release" />
+           revision="refs/heads/nAOSP-nougat-mr2-release" />
 
   <remote  name="millosr"
            fetch="https://github.com/millosr"
-           revision="refs/heads/nAOSP-nougat-mr1.3-release-grouper" />
+           revision="refs/heads/nAOSP-nougat-mr2-release-grouper" />
 
   <remote  name="cm"
            fetch="https://github.com/LineageOS"
@@ -76,8 +76,8 @@
   <project path="system/extras/su" name="android_system_extras_su" remote="mickybart" />
 
   <!-- Asus Nexus 7 / Grouper - Tilapia  -->
-  <project path="device/asus/grouper" name="android_device_asus_grouper" remote="millosr" revision="refs/heads/nAOSP-7.1.1"/>
-  <project path="device/asus/tilapia" name="device_asus_tilapia" remote="millosr" revision="refs/heads/nAOSP-7.1.1"/>
+  <project path="device/asus/grouper" name="android_device_asus_grouper" remote="millosr" revision="refs/heads/nAOSP-7.1.2"/>
+  <project path="device/asus/tilapia" name="device_asus_tilapia" remote="millosr" revision="refs/heads/nAOSP-7.1.2"/>
   <project path="kernel/asus/grouper" name="android_kernel_asus_grouper" remote="millosr" revision="refs/heads/ads-7.0.1" />
   <project path="vendor/asus" name="proprietary_vendor_asus" remote="ads" revision="ads-7.0.1" />
   <project path="vendor/broadcom" name="proprietary_vendor_broadcom" remote="ads" revision="ads-7.0.1" />
@@ -87,7 +87,7 @@
   <project path="vendor/widevine" name="proprietary_vendor_widevine" remote="unlegacy" revision="aosp-7.1" />
 
   <!-- HTC Nexus 9 / Flounder  -->
-  <project path="device/htc/flounder" name="device_htc_flounder" remote="millosr" revision="refs/heads/nAOSP-7.1.1"/>
+  <project path="device/htc/flounder" name="device_htc_flounder" remote="millosr" revision="refs/heads/nAOSP-7.1.2"/>
   <project path="vendor/htc" name="platform_vendor_htc" remote="fwhem" revision="n14" />
 
   <!-- remove features -->
