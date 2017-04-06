@@ -86,7 +86,7 @@
 
   <!-- HTC Nexus 9 / Flounder  -->
   <project path="device/htc/flounder" name="device_htc_flounder" remote="millosr" revision="refs/heads/nAOSP-7.1.1"/>
-  <project path="vendor/htc" name="platform_vendor_htc" remote="fwhem" revision="711" />
+  <project path="vendor/htc" name="platform_vendor_htc" remote="fwhem" revision="n14" />
 
   <!-- remove features -->
   <remove-project name="platform/packages/apps/Music" />
