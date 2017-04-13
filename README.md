@@ -1,16 +1,36 @@
 
-#nAOSP 7.1.1 for Asus Nexus 7 2012 - Grouper, Tilapia
+#nAOSP 7.1.2 for Asus Nexus 7 2012 - Grouper, Tilapia
 
-near AOSP ROM 7.1.1
+near AOSP ROM 7.1.2
 
-##Build
+## Download Source
 
 ```
-repo init -u https://github.com/millosr/naosp_manifest -b nAOSP-7.1.1-grouper
+repo init -u https://github.com/millosr/naosp_manifest -b nAOSP-7.1.2-grouper
 mkdir .repo/local_manifests/
 ln -s ../manifests/local_manifest.xml .repo/local_manifests/local_manifest.xml
-repo sync
+repo sync -j16
+```
 
+## Apply patches
+
+Apply all patches from device/asus/grouper/patch
+```
+cd bionic
+patch -p1 < ../device/asus/grouper/patch/bionic.patch
+cd ../frameworks/base
+patch -p1 < ../../device/asus/grouper/patch/frameworks_base.patch
+cd ../native
+patch -p1 < ../../device/asus/grouper/patch/frameworks_native.patch
+cd ../../hardware/ril
+patch -p1 < ../../device/asus/grouper/patch/hardware_ril.patch
+cd ../../system/netd
+patch -p1 < ../../device/asus/grouper/patch/system_netd.patch
+cd ../..
+```
+
+## Build
+```
 source build/envsetup.sh
 
 export ROM_BUILD_NUM=xx
@@ -21,12 +41,3 @@ lunch
 make otapackage -j4    (-j<number of threads>)
 ```
 
-##Jack Xmx issue
-
-```
-out/host/linux-x86/bin/jack-admin stop-server
-export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m"
-out/host/linux-x86/bin/jack-admin start-server
-
-make otapackage
-```
