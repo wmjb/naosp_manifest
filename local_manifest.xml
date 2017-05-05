@@ -6,7 +6,7 @@
 
   <remote  name="millosr"
            fetch="https://github.com/millosr"
-           revision="refs/heads/nAOSP-nougat-mr2-release-grouper" />
+           revision="refs/heads/nAOSP-nougat-mr2-release-x86" />
 
   <remote  name="cm"
            fetch="https://github.com/LineageOS"
@@ -16,22 +16,18 @@
            fetch="https://github.com/substratum"
            revision="refs/heads/n" />
 
-  <remote  name="ads"
-           fetch="https://github.com/AndDiSa/" />
+  <remote  name="x86"
+           fetch="git://git.osdn.net/gitroot/android-x86" />
 
-  <remote  name="unlegacy"
-           fetch="https://github.com/Unlegacy-Android/" />
-
-  <remote  name="fwhem"
-           fetch="https://github.com/noobbuilds/" />
+  <remote name="github"
+          fetch="https://github.com" />
 
   <!-- remove upstream projects modified for nAOSProm -->
   <remove-project name="platform/build" />
-  <remove-project name="platform/external/f2fs-tools" />
-  <remove-project name="platform/frameworks/av" />
+  <remove-project name="platform/frameworks/av "/>
   <remove-project name="platform/frameworks/base" />
   <remove-project name="platform/frameworks/native" />
-  <remove-project name="platform/frameworks/volley" />
+  <remove-project name="platform/hardware/libhardware" />
   <remove-project name="platform/libcore" />
   <remove-project name="platform/packages/apps/Camera2" />
   <remove-project name="platform/packages/apps/DeskClock" />
@@ -42,18 +38,34 @@
   <remove-project name="platform/packages/apps/Settings" />
   <remove-project name="platform/system/core" />
   <remove-project name="platform/system/extras" />
-  <remove-project name="platform/system/sepolicy" />
-  <remove-project name="device/htc/flounder" />
+
+  <remove-project name="platform/bionic"/>
+  <remove-project name="device/generic/common"/>
+  <remove-project name="device/generic/x86"/>
+  <remove-project name="device/generic/x86_64"/>
+  <remove-project name="platform/external/drm_gralloc"/>
+  <remove-project name="platform/external/drm_hwcomposer"/>
+  <remove-project name="platform/external/e2fsprogs"/>
+  <remove-project name="platform/external/libdrm"/>
+  <remove-project name="platform/external/llvm"/>
+  <remove-project name="platform/external/mesa3d"/>
+  <remove-project name="platform/hardware/broadcom/wlan"/>
+  <remove-project name="platform/hardware/intel/audio_media"/>
+  <remove-project name="platform/hardware/libhardware_legacy"/>
+  <remove-project name="platform/hardware/ril"/>
+  <remove-project name="platform/system/bt"/>
+  <remove-project name="platform/system/vold"/>
 
   <!-- reintroduce modified projects with nAOSProm support -->
   <project path="build" name="android_build" remote="millosr">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="external/f2fs-tools" name="android_external_f2fs-tools" remote="mickybart" />
   <project path="frameworks/av" name="android_frameworks_av" remote="millosr" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="mickybart" />
-  <project path="frameworks/native" name="android_frameworks_native" remote="mickybart" />
-  <project path="frameworks/volley" name="android-volley" remote="millosr" revision="refs/heads/nAOSP-7.0"/>
+  <project path="frameworks/base" name="android_frameworks_base" remote="millosr" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="millosr" />
+  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="millosr" />
+  <project path="system/core" name="android_system_core" remote="millosr"/>
+
   <project path="libcore" name="android_libcore" remote="mickybart" />
   <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="mickybart" />
   <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" remote="mickybart" />
@@ -61,35 +73,67 @@
   <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="mickybart" />
   <project path="packages/apps/PackageInstaller" name="android_packages_apps_PackageInstaller" remote="mickybart" />
   <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="mickybart" />
-  <project path="system/core" name="android_system_core" remote="millosr" />
   <project path="system/extras" name="android_system_extras" remote="mickybart" />
-  <project path="system/sepolicy" name="android_system_sepolicy" remote="millosr"/>
 
   <!-- Extras/3rd -->
+  <project path="external/ahbottomnavigation" name="android_external_ahbottomnavigation" remote="cm" />
   <project path="external/android-visualizer" name="android_external_android-visualizer" remote="cm" />
-  <project path="external/busybox" name="android_external_busybox" remote="mickybart" />
   <project path="packages/apps/Eleven" name="android_packages_apps_Eleven" remote="cm" />
   <project path="packages/apps/Gallery2" name="android_packages_apps_Gallery2" remote="cm" />
-  <project path="external/ahbottomnavigation" name="android_external_ahbottomnavigation" remote="cm" />
   <project path="packages/apps/interfacer" name="interfacer" remote="oms" />
-  <project path="packages/apps/ROMUpdater" name="android_packages_apps_ROMUpdater" remote="mickybart" />
-  <project path="packages/apps/ViPER4AndroidFX" name="android_packages_apps_ViPER4AndroidFX" remote="mickybart" revision="refs/heads/master" />
   <project path="system/extras/su" name="android_system_extras_su" remote="mickybart" />
 
-  <!-- Asus Nexus 7 / Grouper - Tilapia  -->
-  <project path="device/asus/grouper" name="android_device_asus_grouper" remote="millosr" revision="refs/heads/nAOSP-7.1.2"/>
-  <project path="device/asus/tilapia" name="device_asus_tilapia" remote="millosr" revision="refs/heads/nAOSP-7.1.2"/>
-  <project path="kernel/asus/grouper" name="android_kernel_asus_grouper" remote="millosr" revision="refs/heads/ads-7.0.1" />
-  <project path="vendor/asus" name="proprietary_vendor_asus" remote="ads" revision="ads-7.0.1" />
-  <project path="vendor/broadcom" name="proprietary_vendor_broadcom" remote="ads" revision="ads-7.0.1" />
-  <project path="vendor/elan" name="proprietary_vendor_elan" remote="ads" revision="oct-mm" />
-  <project path="vendor/invensense" name="proprietary_vendor_invensense" remote="ads" revision="ads-7.0.1" />
-  <project path="vendor/nvidia" name="proprietary_vendor_nvidia" remote="ads" revision="ads-7.0.1" />
-  <project path="vendor/widevine" name="proprietary_vendor_widevine" remote="unlegacy" revision="aosp-7.1" />
+  <!-- android-x86 -->
+  <project path="device/generic/common" name="android_device_generic_common" groups="pdk" remote="millosr" revision="nAOSP-7.1.2" />
 
-  <!-- HTC Nexus 9 / Flounder  -->
-  <project path="device/htc/flounder" name="device_htc_flounder" remote="millosr" revision="refs/heads/nAOSP-7.1.2"/>
-  <project path="vendor/htc" name="platform_vendor_htc" remote="fwhem" revision="n14" />
+  <project path="kernel" name="kernel/common" remote="x86" revision="kernel-4.4" />
+  <project path="bionic" name="platform/bionic" groups="pdk" remote="x86" revision="nougat-x86" />
+  <project path="bootable/newinstaller" name="platform/bootable/newinstaller" remote="x86" revision="nougat-x86" />
+  <project path="device/generic/firmware" name="device/generic/firmware" remote="x86" revision="nougat-x86" />
+  <project path="device/generic/x86" name="device/generic/x86" groups="pdk" remote="x86" revision="nougat-x86" />
+  <project path="device/generic/x86_64" name="device/generic/x86_64" groups="pdk" remote="x86" revision="nougat-x86" />
+  <project path="external/alsa-lib" name="platform/external/alsa-lib" remote="x86" revision="nougat-x86" />
+  <project path="external/alsa-utils" name="platform/external/alsa-utils" remote="x86" revision="nougat-x86" />
+  <project path="external/bluetooth/bluez" name="platform/external/bluetooth/bluez" remote="x86" revision="nougat-x86" />
+  <project path="external/busybox" name="platform/external/busybox" remote="x86" revision="nougat-x86" />
+  <project path="external/drm_gralloc" name="platform/external/drm_gralloc" groups="drm_gralloc" remote="x86" revision="nougat-x86" />
+  <project path="external/drm_hwcomposer" name="platform/external/drm_hwcomposer" groups="drm_hwcomposer" remote="x86" revision="nougat-x86" />
+  <project path="external/e2fsprogs" name="platform/external/e2fsprogs" groups="pdk" remote="x86" revision="nougat-x86" />
+  <project path="external/eject" name="platform/external/eject" remote="x86" revision="nougat-x86" />
+  <project path="external/exfat" name="platform/external/exfat" remote="x86" revision="nougat-x86" />
+  <project path="external/ffmpeg" name="platform/external/ffmpeg" remote="x86" revision="nougat-x86" />
+  <project path="external/googleanalytics" name="platform/external/googleanalytics" remote="x86" revision="nougat-x86" />
+  <project path="external/libdrm" name="platform/external/libdrm" groups="pdk" remote="x86" revision="nougat-x86" />
+  <project path="external/libtruezip" name="platform/external/libtruezip" remote="x86" revision="nougat-x86" />
+  <project path="external/llvm" name="platform/external/llvm" groups="pdk" remote="x86" revision="nougat-x86" />
+  <project path="external/mesa" name="platform/external/mesa" remote="x86" revision="nougat-x86" />
+  <project path="external/ntfs-3g" name="platform/external/ntfs-3g" remote="x86" revision="nougat-x86" />
+  <project path="external/s2tc" name="platform/external/s2tc" remote="x86" revision="nougat-x86" />
+  <project path="external/stagefright-plugins" name="platform/external/stagefright-plugins" remote="x86" revision="nougat-x86" />
+  <project path="external/v86d" name="platform/external/v86d" remote="x86" revision="nougat-x86" />
+  <project path="frameworks/av" name="platform/frameworks/av" groups="pdk" remote="x86" revision="nougat-x86" />
+  <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="pdk,broadcom_wlan" remote="x86" revision="nougat-x86" />
+  <project path="hardware/gps" name="platform/hardware/gps" remote="x86" revision="nougat-x86" />
+  <project path="hardware/intel/audio_media" name="platform/hardware/intel/audio_media" groups="intel" remote="x86" revision="nougat-x86" />
+  <project path="hardware/intel/libsensors" name="platform/hardware/intel/libsensors" remote="x86" revision="nougat-x86" />
+  <project path="hardware/libaudio" name="platform/hardware/libaudio" remote="x86" revision="nougat-x86" />
+  <project path="hardware/libcamera" name="platform/hardware/libcamera" remote="x86" revision="nougat-x86" />
+  <project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" remote="x86" revision="nougat-x86" />
+  <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" remote="x86" revision="nougat-x86" />
+  <project path="hardware/liblights" name="platform/hardware/liblights" remote="x86" revision="nougat-x86" />
+  <project path="hardware/libsensors" name="platform/hardware/libsensors" remote="x86" revision="nougat-x86" />
+  <project path="hardware/ril" name="platform/hardware/ril" groups="pdk" remote="x86" revision="nougat-x86" />
+  <project path="hardware/x86power" name="platform/hardware/x86power" remote="x86" revision="nougat-x86" />
+  <project path="packages/apps/TSCalibration2" name="platform/packages/apps/TSCalibration2" remote="x86" revision="nougat-x86" />
+  <project path="packages/services/Analytics" name="platform/packages/services/Analytics" remote="x86" revision="nougat-x86" />
+  <project path="system/bt" name="platform/system/bt" groups="pdk" remote="x86" revision="nougat-x86" />
+  <project path="system/vold" name="platform/system/vold" groups="pdk" remote="x86" revision="nougat-x86" />
+
+  <!-- OPENGAPPS-X86 -->
+  <project path="vendor/google/build" name="electrikjesus/aosp_build" revision="master" remote="github" />
+  <project path="vendor/opengapps/sources/all" name="electrikjesus/all" clone-depth="100" revision="n7.1" remote="github" />
+  <project path="vendor/opengapps/sources/x86" name="electrikjesus/x86" clone-depth="100" revision="n7.1" remote="github" />
+  <project path="vendor/opengapps/sources/x86_64" name="electrikjesus/x86_64" clone-depth="100" revision="n7.1" remote="github" />
 
   <!-- remove features -->
   <remove-project name="platform/packages/apps/Music" />
@@ -107,6 +151,8 @@
   <remove-project name="device/google/dragon-kernel" />
   <remove-project name="device/google/marlin" />
   <remove-project name="device/google/marlin-kernel" />
+  <remove-project name="device/htc/flounder" />
+  <remove-project name="device/htc/flounder-kernel" />
   <remove-project name="device/huawei/angler" />
   <remove-project name="device/huawei/angler-kernel" />
   <remove-project name="device/intel/edison" />
