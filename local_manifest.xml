@@ -37,6 +37,7 @@
   <remove-project name="platform/packages/apps/Camera2" />
   <remove-project name="platform/packages/apps/DeskClock" />
   <remove-project name="platform/packages/apps/Email" />
+  <remove-project name="platform/packages/apps/ExactCalculator" />
   <remove-project name="platform/packages/apps/Gallery2" />
   <remove-project name="platform/packages/apps/Launcher3" />
   <remove-project name="platform/packages/apps/PackageInstaller" />
@@ -60,6 +61,7 @@
   <project path="packages/apps/Camera2" name="android_packages_apps_Camera2" remote="mickybart" />
   <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" remote="mickybart" />
   <project path="packages/apps/Email" name="android_packages_apps_Email" remote="mickybart" />
+  <project path="packages/apps/ExactCalculator" name="android_packages_apps_ExactCalculator" remote="mickybart" />
   <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="mickybart" />
   <project path="packages/apps/PackageInstaller" name="android_packages_apps_PackageInstaller" remote="mickybart" />
   <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="mickybart" />
@@ -81,7 +83,7 @@
   <!-- Asus Nexus 7 / Grouper - Tilapia  -->
   <project path="device/asus/grouper" name="android_device_asus_grouper" remote="millosr" revision="refs/heads/nAOSP-7.1.1"/>
   <project path="device/asus/tilapia" name="device_asus_tilapia" remote="millosr" revision="refs/heads/nAOSP-7.1.1"/>
-  <project path="kernel/asus/grouper" name="android_kernel_asus_grouper" remote="millosr" revision="refs/heads/ads-7.0.1" />
+  <project path="kernel/asus/grouper" name="android_kernel_asus_grouper" remote="millosr" revision="refs/heads/ads-7.1.0" />
   <project path="vendor/asus" name="proprietary_vendor_asus" remote="ads" revision="ads-7.0.1" />
   <project path="vendor/broadcom" name="proprietary_vendor_broadcom" remote="ads" revision="ads-7.0.1" />
   <project path="vendor/elan" name="proprietary_vendor_elan" remote="ads" revision="oct-mm" />
