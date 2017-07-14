@@ -2,11 +2,11 @@
 <manifest>
   <remote  name="mickybart"
            fetch="https://github.com/mickybart"
-           revision="refs/heads/nAOSP-nougat-mr2.2-release" />
+           revision="refs/heads/nAOSP-nougat-mr2.3-release" />
 
   <remote  name="millosr"
            fetch="https://github.com/millosr"
-           revision="refs/heads/nAOSP-nougat-mr2.2-release-grouper" />
+           revision="refs/heads/nAOSP-nougat-mr2.3-release-grouper" />
 
   <remote  name="cm"
            fetch="https://github.com/LineageOS"
@@ -53,7 +53,7 @@
   </project>
   <project path="external/f2fs-tools" name="android_external_f2fs-tools" remote="mickybart" />
   <project path="frameworks/av" name="android_frameworks_av" remote="millosr" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="mickybart" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="millosr" />
   <project path="frameworks/native" name="android_frameworks_native" remote="mickybart" />
   <project path="frameworks/volley" name="android-volley" remote="millosr" revision="refs/heads/nAOSP-7.0"/>
   <project path="hardware/ril" name="android_hardware_ril" remote="millosr"/>
