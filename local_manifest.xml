@@ -47,9 +47,9 @@
   <project path="bionic" name="android_bionic" remote="millosr" />
   <project path="bootable/recovery" name="android_bootable_recovery" remote="lineage"/>
   <project path="external/jemalloc" name="android_external_jemalloc" remote="millosr" />
-  <project path="frameworks/av" name="android_frameworks_av" remote="millosr" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="millosr" />
-  <project path="frameworks/native" name="android_frameworks_native" remote="millosr" />
+  <project path="frameworks/av" name="android_frameworks_av" remote="millosr" revision="refs/heads/nAOSP-8.1-wip2" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="millosr" revision="refs/heads/nAOSP-8.1-wip2" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="millosr" revision="refs/heads/nAOSP-8.1-wip2" />
   <project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" remote="millosr" />
   <project path="hardware/libhardware" name="android_hardware_libhardware" remote="millosr" />
   <project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="millosr" />
