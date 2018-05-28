@@ -20,7 +20,6 @@
   <remove-project name="platform/build/soong" />
   <remove-project name="platform/bionic" />
   <remove-project name="platform/bootable/recovery" />
-  <remove-project name="platform/external/jemalloc" />
   <remove-project name="platform/frameworks/av" />
   <remove-project name="platform/frameworks/base" />
   <remove-project name="platform/frameworks/native" />
@@ -52,7 +51,6 @@
   </project>
   <project path="bionic" name="android_bionic" remote="millosr" />
   <project path="bootable/recovery" name="android_bootable_recovery" remote="lineage"/>
-  <project path="external/jemalloc" name="android_external_jemalloc" remote="millosr" />
   <project path="frameworks/av" name="android_frameworks_av" remote="millosr" revision="refs/heads/nAOSP-8.1-wip2" />
   <project path="frameworks/base" name="android_frameworks_base" remote="millosr" revision="refs/heads/nAOSP-8.1-wip2" />
   <project path="frameworks/native" name="android_frameworks_native" remote="millosr" revision="refs/heads/nAOSP-8.1-wip2" />
