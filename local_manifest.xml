@@ -24,6 +24,7 @@
   <remove-project name="platform/frameworks/base" />
   <remove-project name="platform/frameworks/native" />
   <remove-project name="platform/hardware/broadcom/libbt" />
+  <remove-project name="platform/hardware/interfaces" />
   <remove-project name="platform/hardware/libhardware" />
   <remove-project name="platform/hardware/qcom/media" />
   <remove-project name="platform/hardware/ril" />
@@ -55,6 +56,7 @@
   <project path="frameworks/base" name="android_frameworks_base" remote="millosr" />
   <project path="frameworks/native" name="android_frameworks_native" remote="millosr" />
   <project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" remote="millosr" />
+  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="millosr" />
   <project path="hardware/libhardware" name="android_hardware_libhardware" remote="millosr" />
   <project path="hardware/qcom/media" name="aosp_development_sony8960_o_mr1" remote="adriandc" revision="refs/heads/hardware_qcom_media" sync-c="true"/>
   <project path="hardware/ril" name="android_hardware_ril" remote="millosr" />
