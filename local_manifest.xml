@@ -36,6 +36,7 @@
   <remove-project name="platform/packages/providers/MediaProvider" />
   <remove-project name="platform/system/bt" />
   <remove-project name="platform/system/core" />
+  <remove-project name="platform/system/extras" />
   <remove-project name="platform/system/sepolicy" />
 
   <!-- reintroduce modified projects with nAOSProm support -->
@@ -70,6 +71,7 @@
   <project path="packages/providers/MediaProvider" name="aosp_development_sony8960_o_mr1" remote="adriandc" revision="refs/heads/packages_providers_MediaProvider" sync-c="true"/>
   <project path="system/bt" name="android_system_bt" remote="millosr" />
   <project path="system/core" name="android_system_core" remote="millosr" />
+  <project path="system/extras" name="android_system_extras" remote="millosr" />
   <project path="system/sepolicy" name="android_system_sepolicy" remote="millosr" />
 
   <!-- Extras/3rd -->
@@ -80,6 +82,7 @@
   <project path="packages/apps/Eleven" name="android_packages_apps_Eleven" remote="lineage" />
   <project path="packages/apps/Jelly" name="android_packages_apps_Jelly" remote="lineage" />
   <project path="packages/apps/WakeUp" name="android_packages_apps_WakeUp" remote="millosr" />
+  <project path="system/extras/su" name="android_system_extras_su" remote="millosr" />
 
   <!-- Sony Xperia S, Acro S -->
 
