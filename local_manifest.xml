@@ -20,6 +20,7 @@
   <remove-project name="platform/build/soong" />
   <remove-project name="platform/bionic" />
   <remove-project name="platform/bootable/recovery" />
+  <remove-project name="platform/exernal/selinux" />
   <remove-project name="platform/frameworks/av" />
   <remove-project name="platform/frameworks/base" />
   <remove-project name="platform/frameworks/native" />
@@ -63,6 +64,7 @@
   </project>
   <project path="bionic" name="android_bionic" remote="millosr" />
   <project path="bootable/recovery" name="android_bootable_recovery" remote="millosr" />
+  <project path="exernal/selinux" name="aosp_development_sony8960_o_mr1" remote="adriandc" revision="refs/heads/external_selinux" sync-c="true"/>
   <project path="frameworks/av" name="android_frameworks_av" remote="millosr" />
   <project path="frameworks/native" name="android_frameworks_native" remote="millosr" />
   <project path="hardware/qcom/media" name="aosp_development_sony8960_o_mr1" remote="adriandc" revision="refs/heads/hardware_qcom_media" sync-c="true"/>
