@@ -15,21 +15,21 @@ repo sync -j16
 ## Apply patches
 
 Apply all patches from device/asus/grouper/patch
+
 ```
 cd bionic
 patch -p1 < ../device/asus/grouper/patch/bionic.patch
-cd ../frameworks/base
-patch -p1 < ../../device/asus/grouper/patch/frameworks_base.patch
-cd ../native
+cd ../frameworks/native
 patch -p1 < ../../device/asus/grouper/patch/frameworks_native.patch
-cd ../../hardware/ril
-patch -p1 < ../../device/asus/grouper/patch/hardware_ril.patch
 cd ../../system/netd
 patch -p1 < ../../device/asus/grouper/patch/system_netd.patch
-cd ../..
+cd ../../packages/apps/Jelly
+patch -p1 < ../../../device/asus/grouper/patch/packages_apps_Jelly.patch
+cd ../../..
 ```
 
 ## Build
+
 ```
 source build/envsetup.sh
 
