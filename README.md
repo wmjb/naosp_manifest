@@ -6,7 +6,7 @@ near AOSP ROM 7.0
 ##Build
 
 ```
-repo init -u https://github.com/millosr/naosp_manifest -b nAOSP-7.0-grouper
+repo init -u https://github.com/wmjb/naosp_manifest -b nAOSP-7.0-grouper
 mkdir .repo/local_manifests/
 ln -s ../manifests/local_manifest.xml .repo/local_manifests/local_manifest.xml
 repo sync
